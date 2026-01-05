@@ -475,6 +475,18 @@ export default function AICopilot({ analysis, onDataUpdate }: AICopilotProps) {
             </div>
 
             {/* Input Form */}
+            {analysis && (
+                <div className="quick-actions">
+                    <p className="quick-actions-label">Try:</p>
+                    <div className="quick-actions-list">
+                        {suggestedQuestions.map((q, i) => (
+                            <button key={i} onClick={() => handleSuggestion(q)} className="quick-action-btn">
+                                {q}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
             <form className="ai-input-form" onSubmit={handleSubmit}>
                 <input
                     type="text"
