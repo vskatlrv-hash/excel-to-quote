@@ -63,17 +63,18 @@ export default function AICopilot({ analysis, onDataUpdate }: AICopilotProps) {
     const suggestedQuestions = useMemo(() => {
         if (analysis) {
             return [
+                "What's the issue?",
                 "Fix the missing quantities",
-                "Explain the detected risks",
-                "What should I negotiate?",
-                "Summarize this quote",
+                "Delete row 5",
+                "Remove the notes column",
+                "Change quantity in row 2 to 10",
+                "Generate download",
             ];
         }
         return [
             "What can you help me with?",
             "How do I analyze a BOM?",
             "What risks do you detect?",
-            "Tell me about Incoterms",
         ];
     }, [analysis]);
 
